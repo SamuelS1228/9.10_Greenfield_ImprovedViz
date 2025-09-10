@@ -108,7 +108,7 @@ def sidebar(scn):
                 for b in brands:
                     key = f"can_lon_brand_{b}_{name}"
                     default_val = float(scn.get(key, scn.get("can_lon", -105.0)))
-                    val = st.number_input(f"{b} threshold (east faces Canada)", value=default_val, format=\"%.3f\", key=key)
+                    val = st.number_input(f"{b} threshold (east faces Canada)", value=default_val, format="%.3f", key=key)
                     scn[key] = val
                     brand_thresh[b] = float(val)
             scn["brand_can_thresholds"] = brand_thresh
